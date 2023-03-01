@@ -21,13 +21,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Install and Build 🔧 # Build the Project
+      - name: Install and Build 🔧 & Deploy 🚀# Build the Project
         run: |
           npm install
-          npm run predeploy
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v4
-        with:
-          GITHUB_TOKEN : ${{ token }} # This is provided by GitHub.
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: dist # The folder the action should deploy.
+          npm run deploy
