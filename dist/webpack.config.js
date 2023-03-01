@@ -1,18 +1,13 @@
-var path = require('path');
-var fs = require('fs');
-var entries = {
-    index: './src/index.ts'
-};
+
+const path = require('path');
+
 module.exports = {
     mode: 'development',
     devtool: 'inline-source-map',
-    entry: entries,
+    entry: './src/index.ts',
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
-    },
-    devServer: {
-        contentBase: path.join(__dirname, 'dist')
     },
     module: {
         rules: [
@@ -39,4 +34,3 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js'],
     },
 };
-//# sourceMappingURL=webpack.config.js.map

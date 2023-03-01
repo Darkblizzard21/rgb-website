@@ -1,21 +1,16 @@
 
 const path = require('path');
-const fs = require('fs');
-
-let entries = {
-    index: './src/index.ts'
-}
 
 module.exports = {
     mode: 'development',
     devtool: 'inline-source-map',
-    entry: entries,
+    entry: './src/index.ts',
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
     devServer: {
-        contentBase: path.join(__dirname, 'dist')
+        static: path.join(__dirname, 'dist')
     },
     module: {
         rules: [
