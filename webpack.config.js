@@ -9,9 +9,6 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
-    devServer: {
-        static: path.join(__dirname, 'dist')
-    },
     module: {
         rules: [
             {
